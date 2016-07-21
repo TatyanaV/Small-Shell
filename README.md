@@ -55,75 +55,74 @@ Finally, your shell should allow blank lines and comments.  Any line that begins
 
 #Example
 
-Here is an example:
+Here is an example: </br>
 
-% smallsh
-: ls
-junk   smallsh    smallsh.c
-: ls > junk
- : status
- exit value 0
-: cat junk
-junk
-smallsh
-smallsh.c
-: wc < junk
-       3       3      21
-: test -f badfile
-: status
-exit value 1
-: wc < badfile
-smallsh: cannot open badfile for input
-: status
-exit value 1
-: badfile
-badfile: no such file or directory
-: sleep 5
-^Cterminated by signal 2
-: status
-terminated by signal 2
-: sleep 15 &
-background pid is 4923
-: ps
-   PID TTY      TIME CMD
-  4923 pts/4    0:00 sleep
-  4564 pts/4    0:03 tcsh-6.0
-  4867 pts/4    1:32 smallsh
-: 
-: 
-: # that was a blank command line, this is a comment line
-background pid 4923 is done: exit value 0
-: # the background sleep finally finished
-: sleep 30 &
-background pid is 4941
-: kill -15 4941
-background pid 4941 is done: terminated by signal 15
-: pwd
-/nfs/stak/faculty/b/brewsteb/CS344/prog3
-: cd
-: pwd
-/nfs/stak/faculty/b/brewsteb
-: cd CS344
-: pwd
-/nfs/stak/faculty/b/brewsteb/CS344
-: exit
-%
+% smallsh</br>
+: ls</br>
+junk   smallsh    smallsh.c</br>
+: ls > junk</br>
+ : status</br>
+ exit value 0</br>
+: cat junk</br>
+junk</br>
+smallsh</br>
+smallsh.c</br>
+: wc < junk</br>
+       3       3      21</br>
+: test -f badfile</br>
+: status</br>
+exit value 1</br>
+: wc < badfile</br>
+smallsh: cannot open badfile for input</br>
+: status</br>
+exit value 1</br>
+: badfile</br>
+badfile: no such file or directory</br>
+: sleep 5</br>
+^Cterminated by signal 2</br>
+: status</br>
+terminated by signal 2</br>
+: sleep 15 &</br>
+background pid is 4923</br>
+: ps</br>
+   PID TTY      TIME CMD</br>
+  4923 pts/4    0:00 sleep</br>
+  4564 pts/4    0:03 tcsh-6.0</br>
+  4867 pts/4    1:32 smallsh</br>
+: </br>
+: </br>
+: # that was a blank command line, this is a comment line</br>
+background pid 4923 is done: exit value 0</br>
+: # the background sleep finally finished</br>
+: sleep 30 &</br>
+background pid is 4941</br>
+: kill -15 4941</br>
+background pid 4941 is done: terminated by signal 15</br>
+: pwd</br>
+/nfs/stak/faculty/b/brewsteb/CS344/prog3</br>
+: cd</br>
+: pwd</br>
+/nfs/stak/faculty/b/brewsteb</br>
+: cd CS344</br>
+: pwd</br>
+/nfs/stak/faculty/b/brewsteb/CS344</br>
+: exit</br>
+%</br>
 
  
 
-In addition to your shell needing to replicate the above example in functionality, this assignment is provided with the actual grading test scriptView in a new window that will be used to assign your program a grade. To run it, place it in the same directory as your compiled shell, and run this command from a bash prompt:
+In addition to your shell needing to replicate the above example in functionality, this assignment is provided with the actual grading test scriptView in a new window that will be used to assign your program a grade. To run it, place it in the same directory as your compiled shell, and run this command from a bash prompt:</br>
 
- % testscript 2>&1
+ % testscript 2>&1</br>
 
-or
+or</br>
 
-% testscript 2>&1 | more
+% testscript 2>&1 | more</br>
 
-or
+or</br>
 
-% testscript > mytestresults 2>&1 
+% testscript > mytestresults 2>&1 </br>
 
-Don’t worry if the spacing, indentation, or look of the output of the script is different than when you run it interactively: that won’t affect your grade. The script may add extra colons at the beginning of lines or do other weird things. Use it to prepare for your grade, but base the look and feel of your program on the interactive running of your shell
 
 
 #Hints
